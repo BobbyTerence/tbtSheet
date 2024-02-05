@@ -17,7 +17,7 @@ screen_height = root.winfo_screenheight(); # Height of the screen
 x = (screen_width/2) - (width/2);
 y = (screen_height/2) - (height/2);
  
-root.geometry('%dx%d+%d+%d' % (w, h, x, y));
+root.geometry('%dx%d+%d+%d' % (width, height, x, y));
 
 # start the window
 root.mainloop();
