@@ -1,27 +1,23 @@
 # Import Modules
-from tkinter import *
+import tkinter as tk
 
 # Create root Window
-root = Tk();
+root = tk.Tk();
 
 # Title Bar for Window
-root.title("Character Sheet")
+root.title("Character Sheet");
 
-# Defualt Window size
-w = 1280;
-h = 720;
-
-# Add creation location for the window
-#grab window size
-scWidth = root.winfo_screenmmwidth;
-scLength = root.winfo_screenheight;
-
-# Set position of window
-xOrigin = (scWidth/2) - (w/2);
-yOrigin = (scLength/2) - (h/2);
-
-# Set size and position of window
-root.geometry('%dx%d+%d+%d' % (w, h, xOrigin, yOrigin))
+width = 1280; # Width 
+height = 720; # Height
+ 
+screen_width = root.winfo_screenwidth();  # Width of the screen
+screen_height = root.winfo_screenheight(); # Height of the screen
+ 
+# Calculate Starting X and Y coordinates for Window
+x = (screen_width/2) - (width/2);
+y = (screen_height/2) - (height/2);
+ 
+root.geometry('%dx%d+%d+%d' % (w, h, x, y));
 
 # start the window
 root.mainloop();
